@@ -54,5 +54,50 @@ javac Main.java
 java Main
 ```
 
+## Comparison of the C++ and Java Implementations
+
+Both implementations solve the same real-world problem: managing student records and calculating academic statistics. However, they use arrays differently.
+
+### C++ Implementation
+
+The C++ version uses an array of structures:
+
+```cpp
+struct Student {
+    string name;
+    double mark;
+};
+
+Student students[MAX_STUDENTS];
+```
+
+Each array element stores both the student's name and mark in one record.
+
+### Java Implementation
+
+The Java version uses two parallel arrays:
+
+```java
+String[] names = new String[MAX_STUDENTS];
+double[] marks = new double[MAX_STUDENTS];
+```
+
+The student's name and mark are stored at the same index in their respective arrays. For example, `names[0]` and `marks[0]` represent the same student.
+
+### Advantages of Arrays
+
+- Store multiple records under one variable name.
+- Access individual records using indexes.
+- Process records efficiently using loops.
+- Support searching and calculating statistics.
+
+### Limitations of Arrays
+
+- The array capacity is fixed at 100 students.
+- Removing records requires shifting subsequent elements.
+- Parallel arrays must remain synchronized.
+- Searching by name requires checking records one by one.
+
 ## Conclusion
-GradeWise demonstrates a practical application of arrays in education. It shows how programming languages can organize student records and perform useful calculations that support academic administration.
+
+GradeWise demonstrates a real-world application of arrays in school administration. By implementing the system in C++ and Java, the project shows how arrays can store, organize, search, and process student records to produce useful academic statistics.
