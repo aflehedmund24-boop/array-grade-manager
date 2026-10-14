@@ -106,9 +106,9 @@ public class Main {
     public static void main(String[] args) {
         int choice;
         do {
-            System.out.println("\\n=== GRADEWISE: JAVA ===");
-            System.out.println("1. Add student\\n2. View students\\n3. Search student");
-            System.out.println("4. Remove student\\n5. Class statistics\\n0. Exit");
+            System.out.println("\n=== GRADEWISE: JAVA ===");
+            System.out.println("1. Add student\n2. View students\n3. Search student");
+            System.out.println("4. Remove student\n5. Class statistics\n0. Exit");
             System.out.print("Choose: ");
             if (!input.hasNextInt()) {
                 System.out.println("Enter a number.");
