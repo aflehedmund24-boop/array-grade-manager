@@ -1,48 +1,32 @@
 # GradeWise — Student Grade Management System
 
-**Assignment topic:** Real-world applications of arrays as a data structure.
+## Assignment Topic
+**Real-World Applications of Arrays as a Data Structure**
 
-GradeWise is a console-based application implemented in both C++ and Java. It helps a teacher keep student names and marks, calculate grades, search and remove records, and calculate class statistics.
+## Project Overview
+GradeWise is a console-based student grade management system implemented in **C++ and Java**. It helps teachers manage student names and marks, calculate grades, search for students, remove records, and calculate class statistics.
+
+## Real-World Application
+Schools and universities maintain student records containing names, examination marks, and grades. GradeWise demonstrates how arrays can store and process these records efficiently.
+
+## Technologies Used
+- C++
+- Java
+- Arrays
+- Functions and methods
+- Loops and conditional statements
 
 ## Features
-- Add students and marks from 0 to 100
-- View student records and grades
-- Search for a student by name
-- Remove a student
-- Calculate class average, highest mark, number passed, and pass rate
-- Fixed capacity of 100 students
+- Add student records
+- View all student records
+- Search for a student
+- Remove a student record
+- Calculate class average
+- Identify the highest mark
+- Calculate pass statistics
 
-## Grade scale
-- 80–100: A
-- 70–79: B
-- 60–69: C
-- 50–59: D
-- 0–49: F
+## Project Structure
 
-A mark of 50 or higher counts as a pass.
-
-## How arrays are used
-
-### C++
-`Student students[MAX_STUDENTS]` is an array of structures. A loop processes the array to display records, search, calculate statistics, and remove a record. When a record is removed, later elements shift one position left.
-
-Run from `cpp-version`:
-```bash
-g++ main.cpp -o gradewise
-./gradewise
-```
-On Windows, run `gradewise.exe` after compiling.
-
-### Java
-`names` is a `String[]` array and `marks` is a `double[]` array. The same index in both arrays represents one student, such as `names[0]` and `marks[0]`. Loops process the arrays for searching, displaying, statistics, and removal.
-
-Run from `java-version`:
-```bash
-javac Main.java
-java Main
-```
-
-## Project files
 ```text
 array-grade-manager/
 ├── cpp-version/
@@ -52,4 +36,23 @@ array-grade-manager/
 └── README.md
 ```
 
-**Note:** Records are stored in memory only and are lost when the program exits. This project intentionally uses fixed-size arrays to demonstrate the assignment topic.
+## How Arrays Are Used
+Arrays store student records in memory. The program accesses array elements by index, loops through records to display them, searches for matching names, and processes marks to calculate statistics.
+
+## How to Run
+
+### C++
+1. Open `cpp-version/main.cpp` in Code::Blocks or another C++ IDE.
+2. Build and run the program.
+
+### Java
+1. Open `java-version/Main.java` in a Java IDE or terminal.
+2. Compile and run the program using a Java Development Kit (JDK).
+
+```bash
+javac Main.java
+java Main
+```
+
+## Conclusion
+GradeWise demonstrates a practical application of arrays in education. It shows how programming languages can organize student records and perform useful calculations that support academic administration.
