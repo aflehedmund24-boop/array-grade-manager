@@ -4,26 +4,28 @@
 **Real-World Applications of Arrays as a Data Structure**
 
 ## Project Overview
-GradeWise is a console-based student grade management system implemented in **C++ and Java**. It helps teachers manage student names and marks, calculate grades, search for students, remove records, and calculate class statistics.
+GradeWise is a console-based student grade management system developed in **C++**. It demonstrates how arrays can be used to store and manage student records, calculate grades, search for students, remove records, and generate class statistics.
 
 ## Real-World Application
-Schools and universities maintain student records containing names, examination marks, and grades. GradeWise demonstrates how arrays can store and process these records efficiently.
+Schools and universities maintain student records containing names, examination marks, and grades. GradeWise demonstrates how arrays can be used to store and process these records in a simple and organized way.
 
 ## Technologies Used
 - C++
-- Java
 - Arrays
-- Functions and methods
+- Structures (`struct`)
+- Functions
 - Loops and conditional statements
 
 ## Features
 - Add student records
 - View all student records
-- Search for a student
+- Search for a student by name
 - Remove a student record
-- Calculate class average
+- Calculate the class average
 - Identify the highest mark
-- Calculate pass statistics
+- Calculate the number of students who passed
+- Calculate the class pass rate
+- Assign grades based on examination marks
 
 ## Project Structure
 
@@ -31,36 +33,12 @@ Schools and universities maintain student records containing names, examination 
 array-grade-manager/
 ├── cpp-version/
 │   └── main.cpp
-├── java-version/
-│   └── Main.java
 └── README.md
 ```
 
 ## How Arrays Are Used
-Arrays store student records in memory. The program accesses array elements by index, loops through records to display them, searches for matching names, and processes marks to calculate statistics.
 
-## How to Run
-
-### C++
-1. Open `cpp-version/main.cpp` in Code::Blocks or another C++ IDE.
-2. Build and run the program.
-
-### Java
-1. Open `java-version/Main.java` in a Java IDE or terminal.
-2. Compile and run the program using a Java Development Kit (JDK).
-
-```bash
-javac Main.java
-java Main
-```
-
-## Comparison of the C++ and Java Implementations
-
-Both implementations solve the same real-world problem: managing student records and calculating academic statistics. However, they use arrays differently.
-
-### C++ Implementation
-
-The C++ version uses an array of structures:
+GradeWise uses an array of structures to store student information. Each element contains a student's name and examination mark.
 
 ```cpp
 struct Student {
@@ -71,33 +49,40 @@ struct Student {
 Student students[MAX_STUDENTS];
 ```
 
-Each array element stores both the student's name and mark in one record.
+The array allows the program to store multiple student records under one variable name. Each record can be accessed using an index.
 
-### Java Implementation
+The program uses loops to display and process records, searches through the array to find students, shifts elements when removing a record, and processes marks to calculate grades and class statistics.
 
-The Java version uses two parallel arrays:
+## How to Run the Program
 
-```java
-String[] names = new String[MAX_STUDENTS];
-double[] marks = new double[MAX_STUDENTS];
+1. Open `cpp-version/main.cpp` in Code::Blocks or another C++ IDE.
+2. Build or compile the program.
+3. Run the executable.
+4. Follow the on-screen menu to manage student records.
+
+Alternatively, if a C++ compiler such as `g++` is installed, open a terminal in the project directory and run:
+
+```bash
+g++ cpp-version/main.cpp -o GradeWise
 ```
 
-The student's name and mark are stored at the same index in their respective arrays. For example, `names[0]` and `marks[0]` represent the same student.
+On Windows, run the compiled program using:
 
-### Advantages of Arrays
+```bash
+GradeWise.exe
+```
 
-- Store multiple records under one variable name.
-- Access individual records using indexes.
-- Process records efficiently using loops.
-- Support searching and calculating statistics.
+## Advantages of Arrays
+- Store multiple student records under one variable name.
+- Allow direct access to records using indexes.
+- Make it easy to process records using loops.
+- Support searching, record management, and statistical calculations.
 
-### Limitations of Arrays
-
-- The array capacity is fixed at 100 students.
-- Removing records requires shifting subsequent elements.
-- Parallel arrays must remain synchronized.
+## Limitations of Arrays
+- The array has a fixed capacity of 100 students.
+- Removing a record requires shifting subsequent elements.
 - Searching by name requires checking records one by one.
+- The program's records are stored in memory and are not automatically saved permanently after the program closes.
 
 ## Conclusion
-
-GradeWise demonstrates a real-world application of arrays in school administration. By implementing the system in C++ and Java, the project shows how arrays can store, organize, search, and process student records to produce useful academic statistics.
+GradeWise demonstrates a real-world application of arrays in school administration. Using C++, the system stores, organizes, searches, and processes student records to calculate grades and useful academic statistics. The project illustrates how arrays can solve practical problems while also highlighting their limitations, including fixed capacity and the need to shift elements when removing records.
